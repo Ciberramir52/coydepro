@@ -1,0 +1,82 @@
+.navbar-brand {
+    letter-spacing: 6px;
+}
+
+.logo-navbar {
+    max-height: 60px;
+    height: 100%;
+    width: auto;
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.hero-banner {
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Overlay to darken the image for better text readability */
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.mt-10p {
+    margin-top: 10%;
+}
+
+.mt-5p {
+    margin-top: 5%;
+}
+
+.mb-10p {
+    margin-bottom: 10%;
+}
+
+.mb-5p {
+    margin-bottom: 5%;
+}
+
+.my-10p {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.my-5p {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.py-10p {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.py-5p {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.w-90 {
+    width: 90% !important;
+}
+

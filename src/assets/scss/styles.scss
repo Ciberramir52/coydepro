@@ -1,0 +1,85 @@
+// 1. Import Bootstrap functions and variables first (required for variable dependencies)
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garamond';
+    src: url('../fonts/Cormorant_Garamond/static/CormorantGaramond-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('../fonts/Barlow/Barlow-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+// 2. Override Bootstrap variables or set your own
+$body-bg: #e6eeff; // Background color
+$primary: #1d63ff;
+$white: #e6eeff;
+$yellow: #FFB91D;
+$dark: #342501;
+$secondary: $yellow;
+$font-size-base: 1.2rem; // Base font size
+$font-family-base: 'Garamond'; // Font family
+
+// Override individual color variables
+$secondary: $yellow; // Your new secondary color
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+$light: $white;
+// $dark: #212529;
+
+// (Optional) Override the theme-colors map for more control or custom colors
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "danger": $danger,
+    "warning": $warning,
+    "info": $info,
+    "light": $light,
+    "dark": $dark,
+    // You can add custom colors too
+    // "brand": #123456
+);
+
+// $navbar-bg: $primary;
+// $navbar-light-color: $primary;
+$navbar-light-hover-color: $white;
+$navbar-light-active-color: $white;
+// $navbar-light-brand-color: $primary; // Brand color (light navbar)
+$brand-font: 'Playfair';
+$navbar-nav-link-font-size: 1.2rem;
+$title-font: 'Barlow';
+
+.f-title {
+    font-family: $title-font !important;
+}
+
+.f-brand {
+    font-family: $brand-font !important;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: $light !important;
+}
+
+.navbar .navbar-nav .active {
+    color: $light !important;
+}
+
+// 3. Import Bootstrap (after your overrides)
+@import "bootstrap/scss/bootstrap";
