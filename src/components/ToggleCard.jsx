@@ -1,5 +1,4 @@
 const imgStyle = {
-    cursor: 'pointer',
     objectFit: 'cover',
     height: '400px',
     width: '100%'
@@ -12,15 +11,22 @@ const overlayStyle = {
     width: '100%',
     height: '100%',
     backgroundColor: 'rgba(0,0,0,0.5)',
-    cursor: 'pointer',
     pointerEvents: 'auto', // ensures overlay is clickable
+}
+
+const topCardStyle = {
+    position: 'relative',
+    width: '100%'
 }
 
 function ServiceCard({ img, title, description }) {
     return (
         <div className="col-12 col-lg-6 d-flex justify-content-center">
-            <div className="card w-90">
-                <div style={{ position: 'relative', width: '100%' }}>
+            <div className="card w-100">
+                <div
+                    style={topCardStyle}
+                    className="cursor-pointer"
+                >
                     <img
                         src={img}
                         className="card-img card-img-top"
@@ -35,7 +41,7 @@ function ServiceCard({ img, title, description }) {
                         aria-expanded="false"
                         aria-controls={`${title}`}
                     >
-                        <h5 className="card-title fs-4 text-light">{title}</h5>
+                        <h5 className="card-title fs-1 text-light">{title}</h5>
                     </div>
                 </div>
 

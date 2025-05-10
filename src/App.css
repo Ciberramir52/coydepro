@@ -8,6 +8,12 @@
     width: auto;
 }
 
+.logo-footer {
+    max-height: 200px;
+    height: 100%;
+    width: auto;
+}
+
 .navbar-nav .nav-link {
     transition: color 0.3s, background-color 0.3s;
 }
@@ -80,3 +86,39 @@
     width: 90% !important;
 }
 
+.w-80 {
+    width: 80% !important;
+}
+
+.w-70 {
+    width: 70% !important;
+}
+
+.w-65 {
+    width: 65% !important;
+}
+
+.w-60 {
+    width: 60% !important;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.15s linear;
+}
+
+.fade.show {
+    opacity: 1;
+}
+
+.card-img-overlay.fade {
+    transition: opacity 0.4s ease;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.min-width-400 {
+    min-width: 400px !important;
+}

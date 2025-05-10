@@ -1,4 +1,4 @@
-import Tabs from "./Tabs";
+import Tabs from "./NavTabs";
 import Logo from '/src/assets/images/Logo.png';
 
 function Navbar({ tabs, current }) {

@@ -1,9 +1,9 @@
 function Banner({ title, description, cto, img }) {
     const bannerStyle = {
-        backgroundImage: `url(${img})`
+        backgroundImage: `url(${img})`,
     }
     return (
-        <div style={bannerStyle} className='hero-banner mt-5p w-75 mx-auto'>
+        <div style={bannerStyle} className='hero-banner mt-5p w-90 mx-auto min-width-400'>
             <div className='container hero-content d-flex flex-column gap-lg-5 justify-content-center align-items-center'>
                 <h1 className='display-4 fw-bold text-light f-title'>{title}</h1>
                 <p className='lead text-light fs-3 mt-lg-5 mb-lg-5'>

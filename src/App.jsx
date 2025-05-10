@@ -2,34 +2,37 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './assets/scss/styles.scss'
-import ServiceCard from './components/ServiceCard';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import consultoriaImage from '/src/assets/images/Consultoria.png';
-import gestionImage from '/src/assets/images/Gestion.jpg';
-import automatizacionImage from '/src/assets/images/Automatizacion.png';
-import capacitacionImage from '/src/assets/images/Consultoria.png';
+import gestionImage from '/src/assets/images/Gestion-copy.jpg';
+import automatizacionImage from '/src/assets/images/Automatizacion-copy.png';
+import capacitacionImage from '/src/assets/images/Capacitacion.png';
 import heroBanner from '/src/assets/images/Banner.jpg';
+import ToggleList from './components/ToggleList';
+import MainFooter from './components/MainFooter';
+import ToogleSection from './components/ToggleSection';
+import Clients from './components/Clients';
 
 
 const services = [
   {
-    title: 'Consultoria',
+    title: 'Consultoría',
     img: consultoriaImage,
     description: 'Optimización de procesos, mejora continua y reingeniería para aumentar la eficiencia y reducir costos.'
   },
   {
-    title: 'Gestion',
+    title: 'Gestión',
     img: gestionImage,
     description: 'Planeación, supervisión y ejecución de proyectos industriales con prácticas eficientes y consistentes.'
   },
   {
-    title: 'Automatizacion',
+    title: 'Automatización',
     img: automatizacionImage,
     description: 'Integración de tecnología, automatización y documentación para una operación segura y eficiente.'
   },
   {
-    title: 'Capacitacion',
+    title: 'Capacitación',
     img: capacitacionImage,
     description: 'Programas de formación para equipos industriales, enfocados en nuevas tecnologías y mejores prácticas.'
   },
@@ -57,34 +60,44 @@ const bannerContent = {
   cto: 'Contáctanos hoy'
 }
 
-function App() {
+const contact = [
+  {
+    subject: 'Email',
+    content: 'ramiro.ruiz@coydepro.com.mx'
+  },
+  {
+    subject: 'Teléfono',
+    content: '3312214032'
+  }
+]
 
+const cardList = {
+  header: '¿Por qué COYDEPRO?',
+  list: [
+    'Soluciones 100% personalizadas para cada cliente',
+    'Integración de tecnología de punta',
+    'Trato humano y cercano',
+    'Equipo con experiencia multidisciplinaria',
+    'Compromiso con la honestidad, integridad y responsabilidad'
+  ],
+  cardId: 'coydepro-card'
+}
+
+function App() {
   return (
     <>
       <Navbar tabs={tabs} current='Home' />
 
-      <Banner { ...bannerContent }/>
+      <Banner {...bannerContent} />
 
-      <div className='container-fluid w-75 text-center my-10p'>
+      <div className='container-fluid w-90 text-center my-10p'>
         <h3 className='fs-1 f-title text-primary mb-5p'>Nuestra misión</h3>
         <p className='fs-3 text-dark'>Nuestra misión es satisfacer las necesidades tecnológicas de nuestros clientes en los sectores industrial, manufactura y diseño, ofreciendo soluciones personalizadas apoyadas en tecnología de punta y un equipo con amplia experiencia. Nos especializamos en consultoría, capacitación y desarrollo de proyectos para impulsar la competitividad y la excelencia operacional.</p>
       </div>
-      <div className='container-fluid w-75 text-center my-10p'>
-        <h3 className='fs-1 f-title text-primary mb-5p'>Servicios</h3>
-
-        <div className='container text-center'>
-          <div className='row gx-5 gy-5 align-items-start'>
-            {
-              services.map(service => (
-                <ServiceCard key={service.title} {...service} />
-              ))
-            }
-          </div>
-        </div>
-      </div>
-      <div className='container-fluid w-75 text-center my-10p'>
-        <h3 className='fs-1 f-title text-primary mb-5p'>Nuestros clientes</h3>
-      </div>
+      <ToogleSection title='Servicios' elements={services} />
+      <Clients />
+      <ToggleList { ...cardList } />
+      <MainFooter tabs={tabs} contact={contact} />
     </>
   )
 }

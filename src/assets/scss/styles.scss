@@ -81,5 +81,21 @@ $title-font: 'Barlow';
     color: $light !important;
 }
 
+footer .list-unstyled .active.text-light {
+    color: $light !important;
+}
+
+.card-header {
+    border-bottom: $light !important;
+}
+
+.star-list li::before {
+    content: "★";
+    color: $yellow;
+    /* Bootstrap's yellow */
+    margin-right: 0.5em;
+    font-size: 1.2em;
+}
+
 // 3. Import Bootstrap (after your overrides)
 @import "bootstrap/scss/bootstrap";
