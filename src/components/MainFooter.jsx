@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import footerLogo from '/src/assets/images/FooterLogo.png';
+import { scrollToTop } from '../helpers/functions';
 
 function MainFooter({ tabs, contact }) {
     return (
@@ -6,16 +8,16 @@ function MainFooter({ tabs, contact }) {
             <div className="container">
                 <div className="row">
                     <div className="col-md-4 mb-3">
-                        <a className='navbar-brand d-flex align-items-center' href='#'>
+                        <Link to='/' onClick={scrollToTop} className='navbar-brand d-flex align-items-center'>
                             <img src={footerLogo} alt='Coydepro Logo' width='50%' height='50%' className='img-fluid footer-navbar' />
-                        </a>
+                        </Link>
                     </div>
                     <div className="col-md-4 mb-3">
                         <h5 className='fs-4 f-title text-primary'>Enlaces</h5>
                         <ul className="list-unstyled">
                             {
                                 tabs.map(tab => (
-                                    <li key={tab.title}><a href="#" className="text-light text-decoration-none fs-5 f-title">{tab.title}</a></li>
+                                    <li key={tab.title}><Link to={`${tab.to}`} onClick={scrollToTop} className="text-light text-decoration-none fs-5 f-title">{tab.title}</Link></li>
                                 ))
                             }
                         </ul>
