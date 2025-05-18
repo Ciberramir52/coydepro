@@ -1,5 +1,6 @@
 import AccordionItem from "../components/AccordionItem";
 import IndustryCard from "../components/IndustryCard";
+import serviceBanner from "/src/assets/images/ServiceBanner.png"
 
 const services = [
     {
@@ -127,7 +128,7 @@ function ServicePage() {
         <>
             <div style={{ minWidth: "400px" }} className="container-fluid my-5p w-80">
                 <div style={{ background: "#fff" }} className="row">
-                    <img style={{ objectFit: "cover" }} src="/src/assets/images/ServiceBanner.png" alt="" className="col-12 col-lg-8" />
+                    <img style={{ objectFit: "cover" }} src={serviceBanner} alt="" className="col-12 col-lg-8" />
                     <div className="col-12 col-lg-4 p-4 d-flex flex-column justify-content-center align-items-start gap-5">
                         <p className="fs-4 col-12">En Coydepro, brindamos soluciones integrales de ingeniería y consultoría para optimizar procesos, maximizar la eficiencia y asegurar la calidad en la industria. Nuestro enfoque personalizado, el uso de tecnología de punta y un equipo multidisciplinario nos permiten resolver los retos más complejos de nuestros clientes.</p>
                         <a href='#start-analysis' className='btn btn-primary btn-lg w-auto px-4 py-3 text-light fs-3 fw-bold f-title'>Agenda con nosotros</a>
@@ -137,14 +138,14 @@ function ServicePage() {
             <div className="container my-10p">
                 <div className="accordion" id="accordionExample">
                     {
-                        services.map(service => <AccordionItem {...service} />)
+                        services.map(service => <AccordionItem key={service.title} {...service} />)
                     }
                 </div>
             </div>
             <div style={{ minWidth: "400px" }} className="container-fluid w-80">
                 <div className="row gx-5 gy-5">
                     {
-                        industries.map(industry => <IndustryCard {...industry} />)
+                        industries.map(industry => <IndustryCard key={industry.title} {...industry} />)
                     }
                 </div>
             </div>

@@ -6,7 +6,6 @@ import { contact, tabs } from "../helpers/information";
 function Layout() {
     const location = useLocation().pathname.slice(1)
     const current = location === '' ? 'Home' : location
-    console.log(current)
     return (
         <>
             <Navbar tabs={tabs} current={current} />
