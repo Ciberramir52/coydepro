@@ -27,7 +27,7 @@ function MainFooter({ tabs, contact }) {
                         <ul className="list-unstyled">
                             {
                                 contact.map(info => (
-                                    <li key={info.subject} className='fs-5 f-title text-light'>{info.subject}: {info.content}</li>
+                                    <li key={info.subject} className='f-title text-light'>{info.subject}: <span className={info.subject === 'Email' ? 'fs-6' : 'fs-5'}>{info.content}</span></li>
                                 ))
                             }
                             <li>

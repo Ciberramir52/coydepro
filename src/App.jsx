@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 import ServicePage from './pages/ServicePage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path='/servicios' element={<ServicePage />} />
+          <Route path='/contacto' element={<ContactPage />} />
           <Route path='*' element={<Navigate to='/' />} />
         </Route>
       </Routes>
