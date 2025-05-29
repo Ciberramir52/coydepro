@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Banner({ title, description, cto, img }) {
     const bannerStyle = {
         backgroundImage: `url(${img})`,
@@ -9,7 +11,7 @@ function Banner({ title, description, cto, img }) {
                 <p className='lead text-light fs-3 mt-lg-5 mb-lg-5'>
                     {description}
                 </p>
-                <a href='#start-analysis' className='btn btn-secondary btn-lg w-auto px-5 py-3 text-primary fs-3 fw-bold f-title'>{cto}</a>
+                <Link to="/contacto" className='btn btn-secondary btn-lg w-auto px-5 py-3 text-primary fs-3 fw-bold f-title'>{cto}</Link>
             </div>
         </div>
     );

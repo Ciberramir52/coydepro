@@ -1,4 +1,6 @@
-function AccordionItem({ icon, title, description, benefits, explanation }) {
+import { Link } from "react-router-dom";
+
+function AccordionItem({ icon, title, description, benefits, explanation, to }) {
     return (
         <div className="accordion-item">
             <h2 className="accordion-header">
@@ -22,7 +24,7 @@ function AccordionItem({ icon, title, description, benefits, explanation }) {
                             explanation.map(step => <li key={step} className="fs-4">{step}</li>)
                         }
                     </ol>
-                    <a href='#start-analysis' className='btn btn-secondary btn-lg w-auto px-4 py-3 text-light fs-3 fw-bold f-title'>Contactanos</a>
+                    <Link to={to} className='btn btn-secondary btn-lg w-auto px-4 py-3 text-light fs-3 fw-bold f-title'>Contactanos</Link>
                 </div>
             </div>
         </div>

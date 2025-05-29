@@ -4,7 +4,7 @@ import ToggleList from '../components/ToggleList';
 import MainFooter from '../components/MainFooter';
 import ToogleSection from '../components/ToggleSection';
 import Clients from '../components/Clients';
-import { services, bannerContent, cardList } from '../helpers/information'
+import { services, bannerContent, cardList } from '../helpers/mainInformation'
 
 function HomePage() {
     return (

@@ -28,8 +28,18 @@
     align-items: center;
 }
 
+.about-banner {
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
 /* Overlay to darken the image for better text readability */
-.hero-banner::before {
+.hero-banner::before, .about-banner::before {
     content: "";
     position: absolute;
     top: 0;

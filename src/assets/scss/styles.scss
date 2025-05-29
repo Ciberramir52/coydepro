@@ -97,5 +97,13 @@ footer .list-unstyled .active.text-light {
     font-size: 1.2em;
 }
 
+.reasons-list li::before {
+    content: "■";
+    color: $yellow;
+    /* Bootstrap's yellow */
+    margin-right: 0.2em;
+    font-size: 3.5em;
+}
+
 // 3. Import Bootstrap (after your overrides)
 @import "bootstrap/scss/bootstrap";

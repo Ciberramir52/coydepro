@@ -8,6 +8,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 import ServicePage from './pages/ServicePage';
 import ContactPage from './pages/ContactPage';
+import AboutPage from './pages/AboutPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path='/servicios' element={<ServicePage />} />
           <Route path='/contacto' element={<ContactPage />} />
+          <Route path='/nosotros' element={<AboutPage />} />
           <Route path='*' element={<Navigate to='/' />} />
         </Route>
       </Routes>
