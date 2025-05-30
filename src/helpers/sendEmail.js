@@ -7,6 +7,6 @@ export const sendEmail = (e) => {
     e.target,              // Form reference
     { publicKey: 'D2f81n_SI06QiJF18' } // Replace with your actual public key
   )
-  .then(() => alert('Message sent!'))
-  .catch((error) => alert('Failed to send: ' + error));
+  .then(() => alert('Correo enviado!'))
+  .catch(() => alert('Hubo un error al enviar el mensaje'));
 };

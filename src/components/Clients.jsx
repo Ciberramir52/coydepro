@@ -1,7 +1,7 @@
 import ClientCard from './ClientCard';
 import electronicsImage from '/src/assets/images/Electronics.png';
 import constructionImage from '/src/assets/images/Construction.png';
-import automotrizImage from '/src/assets/images/Automotriz.png';
+import automotrizImage from '/src/assets/images/Automotriz.jpg';
 import foodImage from '/src/assets/images/Food.png';
 import farmaceuticImage from '/src/assets/images/Farmaceutic.png';
 
@@ -17,7 +17,7 @@ function Clients() {
                         <div className={`col-12 col-lg-4 d-flex flex-column justify-content-center`}>
                             <div className='row gy-5 align-items-start'>
                                 <ClientCard img={automotrizImage} col='12' title='Automotriz' />
-                                <ClientCard img={foodImage} col='12' title='Alimentación' />
+                                <ClientCard img={foodImage} col='12' title='Alimentos y Bebidas' />
                             </div>
                         </div>
                         <ClientCard img={farmaceuticImage} col='8' title='Farmacéutica' />

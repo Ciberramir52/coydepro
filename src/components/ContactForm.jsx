@@ -4,13 +4,13 @@ function ContactForm({ onSubmit, onChange, data }) {
     
     return (
         <form onSubmit={onSubmit} className="col-12 col-md-5">
-            <h3 className="f-title text-dark fs-3">Contactanos</h3>
+            <h3 className="f-title text-dark fs-3">Contáctanos</h3>
             <div className="mb-3">
                 <label htmlFor="inputName" className="fs-4 text-dark form-label">Nombre</label>
                 <input minLength={4} required onChange={onChange} value={data.name} style={{ background: "#fff" }} type="text" className="py-2 px-3 w-80 text-dark fs-4 form-control border-dark" id="inputName" name="name" aria-describedby="nameHelp" />
             </div>
             <div className="mb-3">
-                <label htmlFor="inputEmail" className="fs-4 text-dark form-label">Email address</label>
+                <label htmlFor="inputEmail" className="fs-4 text-dark form-label">Correo electrónico</label>
                 <input required onChange={onChange} value={data.email} style={{ background: "#fff" }} type="email" className="py-2 px-3 w-80 text-dark fs-4 form-control border-dark" id="inputEmail" name="email" aria-describedby="emailHelp" />
             </div>
             <div className="mb-3">

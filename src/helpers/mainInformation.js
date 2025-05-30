@@ -56,11 +56,13 @@ export const bannerContent = {
 export const contact = [
     {
         subject: 'Email',
-        content: 'ramiro.ruiz@coydepro.com.mx'
+        content: 'clientes@coydepro.com.mx',
+        icon: 'bi-envelope'
     },
     {
         subject: 'Teléfono',
-        content: '331 221 4032'
+        content: '+52 331 221 4032',
+        icon: 'bi-telephone-fill'
     }
 ]
 
