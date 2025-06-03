@@ -61,7 +61,7 @@ export const contact = [
     },
     {
         subject: 'Teléfono',
-        content: '+52 331 221 4032',
+        content: '+52 333 832 2631',
         icon: 'bi-telephone-fill'
     }
 ]

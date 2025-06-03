@@ -39,7 +39,8 @@
 }
 
 /* Overlay to darken the image for better text readability */
-.hero-banner::before, .about-banner::before {
+.hero-banner::before,
+.about-banner::before {
     content: "";
     position: absolute;
     top: 0;

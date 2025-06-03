@@ -1,3 +1,5 @@
+// import { useState } from "react";
+
 const imgStyle = {
     objectFit: 'cover',
     height: '400px',
@@ -12,6 +14,7 @@ const overlayStyle = {
     height: '100%',
     backgroundColor: 'rgba(0,0,0,0.5)',
     pointerEvents: 'auto', // ensures overlay is clickable
+    cursor: "pointer"
 }
 
 const topCardStyle = {
@@ -19,13 +22,12 @@ const topCardStyle = {
     width: '100%'
 }
 
-function ServiceCard({ img, title, description }) {
+function ToggleCard({ img, title, description }) {
     return (
         <div className="col-12 col-lg-6 d-flex justify-content-center">
             <div className="card w-100">
                 <div
                     style={topCardStyle}
-                    className="cursor-pointer"
                 >
                     <img
                         src={img}
@@ -44,7 +46,6 @@ function ServiceCard({ img, title, description }) {
                         <h5 className="card-title fs-1 text-light">{title}</h5>
                     </div>
                 </div>
-
                 <div className="collapse" id={`${title}`}>
                     <div className="card-body bg-secondary px-5 py-5">
                         <p className="card-text fs-4">
@@ -57,4 +58,4 @@ function ServiceCard({ img, title, description }) {
     );
 }
 
-export default ServiceCard;
+export default ToggleCard;
